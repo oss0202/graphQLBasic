@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group 'com.graphql'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation('org.springframework.boot:spring-boot-starter-web:2.5.3')
+//    implementation('org.springframework.boot:spring-boot-starter-test:2.5.3')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa:2.5.3')
+
+    implementation('org.projectlombok:lombok:1.18.18')
+    implementation('com.h2database:h2:1.4.199')
+
+    //GraphQL
+    implementation('com.graphql-java:graphiql-spring-boot-starter:5.0.2')
+    implementation('com.graphql-java:graphql-java-tools:5.2.4')
+
+//    testImplementation 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:11.1.0'
+}
+
+test {
+    useJUnitPlatform()
+}
