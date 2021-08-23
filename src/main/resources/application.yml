@@ -1,5 +1,5 @@
 server:
-  port: 80
+  port: 8080
 
 spring:
   h2:
@@ -7,7 +7,8 @@ spring:
       path: /h2-console
       enabled: true
   datasource:
-    url: jdbc:h2:tcp://localhost/~/test
+#    url: jdbc:h2:tcp://localhost/~/test
+    url: jdbc:h2:mem:testdb
     driver-class-name: org.h2.Driver
     username: sa
     password:
@@ -18,5 +19,8 @@ spring:
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
     format_sql: true
+
+
+
 
 
